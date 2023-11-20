@@ -1,0 +1,62 @@
+h3 {
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+#game-body {
+  background-image: url("./img/wall-bg.jpg");
+  background-attachment: fixed;
+}
+
+.overlay {
+  width: 100vw; height: 100%;
+  background: linear-gradient(rgba(148, 187, 233, 0.7) 0%, rgba(0, 0, 0, 0.7) 100%);
+  position: fixed;
+  z-index: -1;
+}
+
+#game, #game-results {
+  height: auto;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#question-image {
+  width: auto; max-height: 30vh;
+}
+
+.answer-btn {
+  width: 100%; height: 4rem;
+  margin: 0.5rem;
+}
+
+#progress {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 0.8rem;
+  margin: 0 1rem;
+}
+
+.progress-dot {
+  transition: background-color, outline .5s ease;
+  min-width: 1.5rem; min-height: 1.5rem;
+  border-radius: 50%;
+  background-color: slategrey;
+}
+
+#results {
+  width: 100vw; height: 100%;
+  z-index: 10000;
+  position: fixed;
+  left: 0; top: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.flex-center {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+
+.hidden {
+  display: none;
+}
