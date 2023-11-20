@@ -1,11 +1,11 @@
+body {
+  background-image: url("./img/wall-bg.jpg");
+  background-attachment: fixed;
+}
+
 h3 {
   margin-top: 2.5rem;
   margin-bottom: 1rem;
-}
-
-#game-body {
-  background-image: url("./img/wall-bg.jpg");
-  background-attachment: fixed;
 }
 
 .overlay {
@@ -15,7 +15,7 @@ h3 {
   z-index: -1;
 }
 
-#game, #game-results {
+#game, #game-results, #homepage {
   height: auto;
   min-height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
