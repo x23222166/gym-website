@@ -97,6 +97,7 @@ const finalScoreText = document.querySelector("#final-score");
 const finalResultText = document.querySelector("#final-result");
 const voucherDiv = document.querySelector("#voucher-code");
 const finalResults = document.querySelector("#results");
+const restartBtn = document.querySelector("#restart-btn");
 
 const startGame = () => {
   // Hide the results
@@ -164,9 +165,11 @@ const finishGame = () => {
   if (finalScore >= 3) {
     finalResultText.innerText = "Winner!";
     voucherDiv.innerText = "Voucher code: NEWME2024";
+    restartBtn.classList.add("hidden");
   } else {
     finalResultText.innerText = "Try again!";
     voucherDiv.innerText = "";
+    restartBtn.classList.remove("hidden");
   }
   finalScoreText.innerText = `You got ${finalScore} point${
     finalScore !== 1 ? "s" : ""
@@ -179,6 +182,9 @@ const finishGame = () => {
 // Add an event listener for each answer button
 answerBtns.forEach((btn, index) => {
   btn.addEventListener("click", () => {
+    // Scroll to the top of the page (better experience on mobile devices)
+    window.scrollTo({ top: 0, behavior: "smooth" });
+
     // Check if answer was correct
     if (quiz[currentQuestionIndex].answers[index][1]) {
       score[progress] = 1;
