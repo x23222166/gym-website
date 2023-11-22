@@ -1,3 +1,4 @@
+// All quiz questions
 let quiz = [
   {
     question: "How do you call this exercise?",
@@ -79,11 +80,15 @@ let quiz = [
   },
 ];
 
+// Variables to keep track of the score and progress
 let currentQuestionIndex = 0;
 let score = [0, 0, 0, 0, 0];
 let progress = 0;
+
+// Make a copy of the quiz, so the questions can be removed from the original array and not appear twice in one go
 let quizCopy = [...quiz];
 
+// Variables for quick access to the DOM elements
 const answerBtns = document.querySelectorAll(".answer-btn");
 const questionDiv = document.querySelector("#question");
 const questionImg = document.querySelector("#question-image");
@@ -119,16 +124,19 @@ const startGame = () => {
 const colorProgressDots = () => {
   // Change progress dots colors
   if (progress > 0) {
+    // Check if previous answer was correct
     if (score[progress - 1]) {
       progressDots[progress - 1].classList.add("bg-success");
     } else {
       progressDots[progress - 1].classList.add("bg-danger");
     }
+    // Change the outline of the previous progress dot
     progressDots[progress - 1].style.outline = "4px solid rgba(0, 0, 0, 0.5)";
   }
 };
 
 const getNextQuestion = () => {
+  // Change the outline of the current question
   progressDots[progress].style.outline = "4px solid rgba(255, 255, 255, 0.5)";
 
   // Get next random quiz question
@@ -149,8 +157,10 @@ const getNextQuestion = () => {
 };
 
 const finishGame = () => {
+  // Count the final score
   const finalScore = score.reduce((a, b) => a + b, 0);
 
+  // Change the final message
   if (finalScore >= 3) {
     finalResultText.innerText = "Winner!";
     voucherDiv.innerText = "Voucher code: NEWME2024";
@@ -162,6 +172,7 @@ const finishGame = () => {
     finalScore !== 1 ? "s" : ""
   }!`;
 
+  // Show the results
   results.classList.remove("hidden");
 };
 
