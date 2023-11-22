@@ -139,7 +139,7 @@ const getNextQuestion = () => {
   questionDiv.innerText = nextQuestion.question;
 
   // Show image
-  questionImg.src = `../img/quiz/${nextQuestion.imageUrl}`;
+  questionImg.src = `../../img/quiz/${nextQuestion.imageUrl}`;
   questionImg.alt = nextQuestion.imageAlt;
 
   // Assign answers
