@@ -114,30 +114,25 @@ footer {
   transition: opacity 0.8s ease-out, right 0.8s ease-out;
 }
 
-/* ----------------- */
-/* CONTACT           */
-/* ----------------- */
-
-/* .section-contact {
-  background-color: hsl(var(--clr-neutral-200));
-} */
-.container-contact {
+/* REGISTRATION PAGE */
+/* register section */
+.container-register {
   flex-direction: column;
 }
 @media (min-width: 60rem) {
-  .container-contact {
+  .container-register {
     flex-direction: row;
     justify-content: space-between;
   }
 }
 
-.contact-left {
+.register-left {
   width: 100%;
   max-width: 33%;
   min-width: 380px;
 }
 
-.contact-right {
+.register-right {
   width: 100%;
   max-width: 58%;
 }
@@ -146,45 +141,23 @@ footer {
   padding-bottom: 0.5rem;
 }
 
-.section-contact .fa {
-  background-color: hsl(var(--clr-primary));
-  color: hsl(var(--clr-neutral-100));
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  font-size: 1.5rem;
-  display: grid;
-  place-items: center;
-  min-width: 50px;
-}
-
-.contact-form .button-primary {
+.register-form .button-primary {
   width: 100%;
 }
 
-.contact-links {
-  --flow-space: 1.5rem;
-}
-
-.contact-link {
-  max-width: 320px;
-}
-
 @media (max-width: 60rem) {
-  .contact-link {
-    max-width: 100%;
-  }
-  .contact-left,
-  .contact-right {
+  .register-left,
+  .register-right {
     width: 100%;
     max-width: 100%;
     min-width: initial;
   }
-  .contact-left {
+  .register-left {
     margin-bottom: 48px;
   }
 }
 
+/* form */
 form {
   padding: 80px 64px;
   background-color: #fff;
@@ -248,7 +221,7 @@ form {
   opacity: 1;
 }
 
-.contact-form {
+.register-form {
   grid-template-areas:
     "firstname"
     "lastname"
@@ -259,7 +232,7 @@ form {
     "submit";
 }
 @media (min-width: 40rem) {
-  .contact-form {
+  .register-form {
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas:
       "firstname lastname"
@@ -291,9 +264,38 @@ form {
   grid-area: submit;
 }
 
-/* ----------------- */
+/* GALLERY PAGE */
+.gallery {
+  width: 80%;
+  margin-inline: auto;
+}
+
+.gallery img {
+  min-height: 60vh;
+  max-height: 70vh;
+  object-fit: cover;
+  cursor: pointer;
+  position: relative;
+}
+
+.img-div {
+  position: relative;
+}
+
+.img-modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  background-color: rgba(37, 37, 37, 0.95);
+  opacity: 0.85;
+  padding: 2rem;
+  cursor: pointer;
+}
+
 /* UTILITY CLASSES   */
-/* ----------------- */
 .container {
   padding-inline: 1rem;
   margin-inline: auto;
@@ -358,6 +360,7 @@ form {
   align-items: center;
 }
 
+/* buttons */
 .button-primary {
   /* display: inline-block; */
   padding: 26px 46px;
@@ -395,7 +398,7 @@ form {
   border-color: white;
 }
 
-/* MODALS */
+/* modals */
 .modals {
   background-color: rgba(37, 37, 37, 0.35);
   position: fixed;
@@ -420,19 +423,16 @@ form {
   box-shadow: 0 0 5px 2px #ffffff;
 }
 
-.modals-popup * + * {
-  margin-top: 1rem;
-}
-
 .modals-content {
   width: 200px;
 }
 
-/* invalid input page */
+/* form confirmation modal */
 .form-confirmation {
   z-index: 40;
 }
 
+/* hidden utility */
 .hidden {
   display: none;
 }

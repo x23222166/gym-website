@@ -18,18 +18,24 @@ form.addEventListener("submit", (e) => {
   let messages = [];
 
   // add error messages to array where needed
+  // firstname validation
   if (firstName.value == "" || firstName.value == null) {
     messages.push("First Name is Required!");
   }
+  // lastname validation
   if (lastName.value == "" || lastName.value == null) {
     messages.push("Last Name is Required!");
   }
+  // email validation
+  // regular expression cited from w3resource.com
   if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email.value)) {
     messages.push("Invalid email");
   }
+  // phone number validation
   if (phoneNumber.value.length < 7 || phoneNumber.value.length > 10) {
     messages.push("Phone number must be between 7 and 10 characters");
   }
+  // checkbox validation
   if (!checkbox.checked) {
     messages.push("You must agree to the terms and conditions");
   }

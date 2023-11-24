@@ -10,11 +10,20 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
     <script src="gallery.js" defer></script>
     <link rel="stylesheet" href="../../styles.css" />
   </head>
   <body class="text-white">
+    <!-- OVERLAY -->
     <div class="overlay"></div>
+    <!-- OVERLAY -->
+
+    <!-- HEADER -->
     <header>
       <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="../../index.html"
@@ -65,13 +74,181 @@
         </div>
       </nav>
     </header>
-    <div id="gallery"></div>
+    <!-- HEADER -->
+
+    <!-- MAIN -->
+    <div id="gallery" class="gallery">
+      <!-- HEADING -->
+      <div class="heading text-center py-5">
+        <h1>View our Gallery!</h1>
+      </div>
+      <!-- HEADING -->
+
+      <!-- CAROUSEL -->
+      <div id="carouselExampleIndicators" class="carousel slide">
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="../../img/carousel/img1.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="../../img/carousel/img2.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="../../img/carousel/img3.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <!-- CAROUSEL -->
+
+      <!-- MORE IMAGES BREAK -->
+      <div class="heading text-center py-5">
+        <h2>See more images below</h2>
+      </div>
+      <!-- MORE IMAGES BREAK -->
+
+      <!-- Gallery -->
+      <div class="row">
+        <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+          <div id="img1-div" class="img-div">
+            <img
+              id="img1"
+              src="../../img/gallery/img1.jpg"
+              class="w-100 shadow-1-strong rounded mb-4 gallery-img"
+              alt="Boat on Calm Water"
+            />
+            <div id="img1-modal" class="img-modal hidden">
+              <h3>Perfect view for a squat</h3>
+            </div>
+          </div>
+
+          <div id="img2-div" class="img-div">
+            <img
+              id="img2"
+              src="../../img/gallery/img2.jpg"
+              class="w-100 shadow-1-strong rounded mb-4 gallery-img"
+              alt="Wintry Mountain Landscape"
+            />
+            <div id="img2-modal" class="img-modal hidden">
+              <h3>Stephen getting those gains in!</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <div id="img3-div" class="img-div">
+            <img
+              id="img3"
+              src="../../img/gallery/img5.jpg"
+              class="w-100 shadow-1-strong rounded mb-4 gallery-img"
+              alt="Mountains in the Clouds"
+            />
+            <div id="img3-modal" class="img-modal hidden">
+              <h3>Kelly showing us the ropes</h3>
+            </div>
+          </div>
+          <div id="img4-div" class="img-div">
+            <img
+              id="img4"
+              src="../../img/gallery/img4.jpg"
+              class="w-100 shadow-1-strong rounded mb-4 gallery-img"
+              alt="Boat on Calm Water"
+            />
+            <div id="img4-modal" class="img-modal hidden">
+              <h3>RUN RUN RUN</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <div id="img5-div" class="img-div">
+            <img
+              id="img5"
+              src="../../img/gallery/img6.jpg"
+              class="w-100 shadow-1-strong rounded mb-4 gallery-img"
+              alt="Waves at Sea"
+            />
+            <div id="img5-modal" class="img-modal hidden">
+              <h3>Don't raise hell, raise dumbbells!</h3>
+            </div>
+          </div>
+          <div id="img6-div" class="img-div">
+            <img
+              id="img6"
+              src="../../img/gallery/img3.jpg"
+              class="w-100 shadow-1-strong rounded mb-4 gallery-img"
+              alt="Yosemite National Park"
+            />
+            <div id="img6-modal" class="img-modal hidden">
+              <h3>Best foot forward</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Gallery -->
+    </div>
+    <!-- MAIN -->
+
+    <!-- FOOTER -->
     <footer class="d-flex justify-content-around align-items-center bg-dark">
       <div>
         <a href="#"><img src="../../img/logo.png" width="30" height="30" /></a>
         <span>© 2023 Muscle Hustle Junction</span>
       </div>
     </footer>
+    <!-- FOOTER -->
+
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
