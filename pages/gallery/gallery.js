@@ -37,6 +37,10 @@ imgs.forEach((img) => {
 // hide image modal on click
 modals.forEach((modal) => {
   modal.addEventListener("click", function (e) {
-    e.target.classList.add("hidden");
+    if (!e.target.classList.contains("img-modal")) {
+      e.target.closest(".img-modal").classList.add("hidden");
+    } else {
+      e.target.classList.add("hidden");
+    }
   });
 });
