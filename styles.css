@@ -2,6 +2,11 @@ body {
   background-image: url("./img/wall-bg.jpg");
   background-attachment: fixed;
   min-width: 320px;
+  font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: 'Bebas Neue', sans-serif;
 }
 
 h3 {
