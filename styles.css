@@ -403,6 +403,11 @@ form {
   border-color: white;
 }
 
+.registration-complete-btn {
+  text-decoration: none;
+  display: inline-block;
+}
+
 /* modals */
 .modals {
   background-color: rgba(37, 37, 37, 0.35);
