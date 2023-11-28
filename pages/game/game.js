@@ -1,3 +1,4 @@
+// Created by Pawel Wierzgon
 // All quiz questions
 let quiz = [
   {

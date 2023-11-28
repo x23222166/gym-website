@@ -1,3 +1,4 @@
+// Created by Pawel Wierzgon
 let isPromoBoxOut = false;
 let promoBox = document.querySelector("#promo-box");
 

@@ -1,3 +1,4 @@
+// Created by Jeffrey Vavasour
 // form dom elements
 const firstName = document.getElementById("firstname");
 const lastName = document.getElementById("lastname");

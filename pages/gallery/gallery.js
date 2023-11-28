@@ -1,3 +1,4 @@
+// Created by Jeffrey Vavasour
 // select all specific img modals
 const img1Modal = document.getElementById("img1-modal");
 const img2Modal = document.getElementById("img2-modal");
